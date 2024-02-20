@@ -1,0 +1,49 @@
+# HW9 - User Manual
+
+This contains valid commands to be used in the command line or in script files.
+
+## Valid Commands
+For running commands from a txt file:
+
+	"-file name-of-script.txt"
+	
+	The txt file of commands must follow the rules below to work properly.
+	
+For loading or saving images:
+
+	"load filepath imageID"
+	"save filepath imageID"
+	
+	The filepath is referenced to the project itself, so if there is an "images" folder in the
+	project, then filepath is "images/filename"
+
+For brightening or darkening the image:
+
+	"brighten increment sourceImageID destImageId" 
+	"darken increment sourceImageID destImageId" 
+	
+	Both commands call the same BrightnessCommand and BrightnessTransformation so increment can be
+	positive or negative. It will simply be added to each rgb value in each pixel. source image is changed and then result is saved to new image in image database using destImageID.
+
+For applying transformations to the image:
+
+	"blur sourceImageID destImageID"
+	"sharpen sourceImageID destImageID"
+	"sepia sourceImageID destImageID"
+	"red-component sourceImageID destImageID"
+	"green-component sourceImageID destImageID"
+	"blue-component sourceImageID destImageID"
+	"value-component sourceImageID destImageID"
+	"intensity-component sourceImageID destImageID"
+	"luma-component sourceImageID destImageID"
+	
+	These will apply the transformation to a source image and save a new image ot the image database
+	using destImageId
+
+## GUI Directions
+1. To run the GUI, run an empty configuration file from Main.
+2. Once the GUI pops up, load an image with the "Load Image" button and following the dialog
+3. Once the image appears in the canvas, apply any transforms using the buttons on the toolbar to
+   the right. As many transforms as desired can be applied, and the updated image will appear. A
+   histogram can be found underneath the image for reference.
+4. Save the image by using the "Save Image" button and following the dialog.
